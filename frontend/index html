@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OracleNet - AI Soccer Predictions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-brain"></i></div>
+                    <div class="logo-text">OracleNet</div>
+                </div>
+                <div class="nav-links">
+                    <a href="#predictions">Predictions</a>
+                    <a href="#value-bets">Value Bets</a>
+                    <a href="#performance">Performance</a>
+                    <a href="#about">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>AI-Powered Soccer Predictions</h1>
+            <p>Our synthetic intelligence system analyzes hundreds of factors to deliver accurate match predictions with confidence ratings</p>
+            <div class="last-updated" id="last-updated">Loading data...</div>
+        </section>
+
+        <div class="dashboard">
+            <div class="ai-status">
+                <h2><i class="fas fa-robot"></i> AI Helpers Status</h2>
+                <ul class="helper-list" id="helper-status">
+                    <!-- Will be populated by JavaScript -->
+                </ul>
+            </div>
+
+            <div class="predictions" id="predictions">
+                <div class="predictions-header">
+                    <h2>Today's Predictions</h2>
+                    <div class="date-filter">
+                        <span>Filter:</span>
+                        <select id="league-filter">
+                            <option value="all">All Leagues</option>
+                            <option value="PSL">South Africa PSL</option>
+                            <option value="EPL">English Premier League</option>
+                            <option value="LL">La Liga</option>
+                            <option value="SA">Serie A</option>
+                            <option value="BL">Bundesliga</option>
+                            <option value="L1">Ligue 1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="matches" id="matches-container">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <section class="bet-section" id="value-bets">
+            <h2><i class="fas fa-coins"></i> Value Bets</h2>
+            <div class="bet-grid" id="value-bets-container">
+                <!-- Will be populated by JavaScript -->
+            </div>
+            <div class="place-bet">
+                <button class="btn" id="place-bet-btn">Place Multi Bet (R1)</button>
+            </div>
+        </section>
+
+        <section class="performance" id="performance">
+            <h2><i class="fas fa-chart-bar"></i> AI Performance</h2>
+            <div class="stats" id="performance-stats">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2><i class="fas fa-info-circle"></i> About OracleNet</h2>
+            <p>OracleNet uses advanced synthetic intelligence to analyze hundreds of factors including player performance, team form, injuries, weather conditions, and historical data to predict soccer match outcomes.</p>
+            <p>Our system continuously learns and improves its predictions based on new data and match results.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>OracleNet - AI-Powered Soccer Predictions | This product is for entertainment purposes only</p>
+            <p>Please gamble responsibly. Must be 18+ to participate.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
