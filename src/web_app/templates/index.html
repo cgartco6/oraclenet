@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OracleNet - Today's Predictions</title>
+    <style>
+        body { font-family: Arial; margin: 20px; }
+        .match { border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; border-radius: 5px; }
+        .prediction { font-weight: bold; }
+        .correct { background-color: #ccffcc; border-left: 5px solid #00ff00; } /* Neon Green */
+        .incorrect { background-color: #ffcccc; border-left: 5px solid #ff0000; } /* Red */
+    </style>
+</head>
+<body>
+    <h1>Today's Predictions ({{ date }})</h1>
+
+    {% for match in predictions %}
+    <div class="match">
+        <h2>{{ match.home_team }} vs. {{ match.away_team }}</h2>
+        <p class="prediction">Predicted Result: <strong>{{ match.predicted_result }}</strong> (Confidence: {{ "%.0f"|format(match.result_confidence * 100) }}%)</p>
+        <p class="prediction">Both Teams to Score: <strong>{{ match.predicted_btts }}</strong> (Confidence: {{ "%.0f"|format(match.btts_confidence * 100) }}%)</p>
+    </div>
+    {% else %}
+    <p>No predictions for today yet. Check back later.</p>
+    {% endfor %}
+
+</body>
+</html>
